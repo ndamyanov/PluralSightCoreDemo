@@ -32,6 +32,10 @@ namespace PluralSightCoreDemo.Controllers
         public IActionResult Details(int id)
         {
             var model = _data.Get(id);
+            if(model == null)
+            {
+                return BadRequest();
+            }
             return View(model);
         }
 

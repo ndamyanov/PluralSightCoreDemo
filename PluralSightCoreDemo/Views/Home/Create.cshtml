@@ -11,5 +11,6 @@
         <select asp-for="TypeRestourant" asp-items="@Html.GetEnumSelectList<TypeOfRestaurant>()"></select>
         <span asp-validation-for="TypeRestourant"></span>
     </div>
+   
     <input type="submit" name="save" value="save" />
 </form> 

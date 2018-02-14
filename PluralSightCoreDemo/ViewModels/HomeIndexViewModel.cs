@@ -11,5 +11,7 @@ namespace PluralSightCoreDemo.ViewModels
         public IEnumerable<Restaurant> Restourants { get; set; }
 
         public string CurrentMessage { get; set; }
+
+        public IEnumerable<RestaurantCity> Cities { get; set; }
     }
 }

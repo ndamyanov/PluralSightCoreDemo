@@ -11,7 +11,7 @@
         {
             var base64 = Convert.ToBase64String(img.ImageData);
             var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
-            
+
             <div class="row">
                 <div class="col-md-1">@img.Id</div>
                 <div class="col-md-3"><img src="@imgSrc" alt="image" style="height:200px;width:200px; border-radius:500px" /></div>
@@ -24,7 +24,8 @@
     {
         <h2>No Images</h2>
     }
+    <a class="btn btn-info" role="button" asp-controller="Image" asp-action="UploadImage">Upload new image</a>
 </div>
 
-<a class="btn bnt-defaut" asp-controller="Image" asp-action="UploadImage">Upload new image</a>
+
 

@@ -48,7 +48,7 @@ namespace PluralSightCoreDemo
                 app.UseDeveloperExceptionPage();
             }
             app.UseStaticFiles();
-
+            
             app.UseNodeModules(env.ContentRootPath);
 
             //AutoMapper.Mapper.Initialize(cfg =>

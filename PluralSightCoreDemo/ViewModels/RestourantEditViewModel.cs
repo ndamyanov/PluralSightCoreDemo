@@ -1,4 +1,5 @@
 ﻿using PluralSightCoreDemo.Models;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace PluralSightCoreDemo.ViewModels
@@ -11,6 +12,8 @@ namespace PluralSightCoreDemo.ViewModels
         public string Name { get; set; }
 
         public TypeOfRestaurant TypeRestourant { get; set; }
+
+        public IEnumerable<RestaurantCity> Cities { get; set; }
 
         public static implicit operator RestourantEditViewModel(Restaurant restaurant)
         {

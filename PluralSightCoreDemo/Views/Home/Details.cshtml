@@ -3,22 +3,25 @@
     ViewBag.Title = Model.Name;
 }
 
-<h2>@Model.Name</h2>
+<div class="container" style="background-color:darkgrey">
+    <h2>@Model.Name</h2>
 
 
-...more details about the restourant...
-<br>
+    ...more details about the restourant...
+    <br>
 
-<div>@Model.Id</div>
-<div>@Model.TypeRestaurant</div>
+    <div>@Model.Id</div>
+    <div>@Model.TypeRestaurant</div>
 
-@if (Model.Cities != null)
-{
-    @foreach (var city in Model.Cities)
+    @if (Model.Cities != null)
     {
-       
+        @foreach (var city in @Model.Cities)
+        {
+            <div>@city </div>
+
+        }
 
     }
-}
 
-<a class="btn btn-defaut" asp-action="Index" asp-controller="Home">Back</a>
+    <a class="btn btn-defaut" asp-action="Index" asp-controller="Home">Back</a>
+</div>
