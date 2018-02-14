@@ -1,0 +1,11 @@
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo\bin\Debug\netcoreapp2.0\PluralSightCoreDemo.deps.json
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo\bin\Debug\netcoreapp2.0\PluralSightCoreDemo.runtimeconfig.json
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo\bin\Debug\netcoreapp2.0\PluralSightCoreDemo.runtimeconfig.dev.json
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo\bin\Debug\netcoreapp2.0\PluralSightCoreDemo.dll
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo\bin\Debug\netcoreapp2.0\PluralSightCoreDemo.pdb
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo\obj\Debug\netcoreapp2.0\PluralSightCoreDemo.csprojResolveAssemblyReference.cache
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo\obj\Debug\netcoreapp2.0\PluralSightCoreDemo.csproj.CoreCompileInputs.cache
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo\obj\Debug\netcoreapp2.0\PluralSightCoreDemo.AssemblyInfoInputs.cache
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo\obj\Debug\netcoreapp2.0\PluralSightCoreDemo.AssemblyInfo.cs
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo\obj\Debug\netcoreapp2.0\PluralSightCoreDemo.dll
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo\obj\Debug\netcoreapp2.0\PluralSightCoreDemo.pdb

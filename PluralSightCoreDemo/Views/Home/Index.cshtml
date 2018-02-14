@@ -1,0 +1,36 @@
+﻿@model HomeIndexViewModel;
+
+@{
+    ViewBag.Title = "Home page";
+}
+<h2>All Restaurants</h2>
+@if (Model.Restourants != null)
+{
+    <div class="container">
+        @foreach (var restaurant in Model.Restourants)
+        {
+            <div class="row">
+                <div class="col-md-1">@restaurant.Id</div>
+                <div class="col-md-3">@restaurant.Name</div>
+                <div class="col-md-2"><a class="btn bnt-defaut" asp-action="Details" asp-route-id="@restaurant.Id">Details</a></div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <h2>No restaurants to show</h2>
+
+}
+
+
+<a class="btn bnt-defaut" asp-action="Create">Add new Restaurant</a>
+<div class="col-xs-6 col-sm-3" style="background-color:gray">
+    <span class="hidden-xs"> Will hide on small screens XS</span>
+    <span class="hidden-sm"> Hide on SM</span>
+    <span class="visible-lg"> LARGE SCREEN</span>
+
+</div>
+@section footer{
+    @Model.CurrentMessage
+}

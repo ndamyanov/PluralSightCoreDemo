@@ -1,0 +1,15 @@
+﻿@model RestourantEditViewModel;
+
+<form method="post">
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div>
+        <label asp-for="TypeRestourant"></label>
+        <select asp-for="TypeRestourant" asp-items="@Html.GetEnumSelectList<TypeOfRestaurant>()"></select>
+        <span asp-validation-for="TypeRestourant"></span>
+    </div>
+    <input type="submit" name="save" value="save" />
+</form> 

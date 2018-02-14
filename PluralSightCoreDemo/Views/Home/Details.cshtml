@@ -1,0 +1,24 @@
+﻿@model Restaurant;
+@{
+    ViewBag.Title = Model.Name;
+}
+
+<h2>@Model.Name</h2>
+
+
+...more details about the restourant...
+<br>
+
+<div>@Model.Id</div>
+<div>@Model.TypeRestaurant</div>
+
+@if (Model.Cities != null)
+{
+    @foreach (var city in Model.Cities)
+    {
+       
+
+    }
+}
+
+<a class="btn btn-defaut" asp-action="Index" asp-controller="Home">Back</a>

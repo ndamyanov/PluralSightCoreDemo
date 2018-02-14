@@ -1,0 +1,16 @@
+﻿@model IEnumerable<CityIndexViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+@foreach(var city in Model)
+{
+    <h3> @city.Name</h3>
+
+    <h4>@city.Population</h4>
+
+}
+
+
