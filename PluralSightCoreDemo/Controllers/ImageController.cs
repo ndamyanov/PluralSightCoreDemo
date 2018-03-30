@@ -11,6 +11,7 @@ using PluralSightCoreDemo.Models;
 using PluralSightCoreDemo.Data;
 using PluralSightCoreDemo.Services;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 
 namespace PluralSightCoreDemo.Controllers
 {
@@ -76,12 +77,15 @@ namespace PluralSightCoreDemo.Controllers
         //}
 
         [HttpGet]
+        [Authorize]
         public IActionResult UploadImage()
         {
             return View();
         }
 
         [HttpPost]
+        [Authorize]
+        [ValidateAntiForgeryToken]
         //[ActionName("UploadImage")]
         public async Task<IActionResult> UploadImage(IFormFile file)
         {
@@ -99,6 +103,16 @@ namespace PluralSightCoreDemo.Controllers
               return RedirectToAction(nameof(Index));
             }
             return BadRequest("Something goes wrong");
+        }
+
+        public IActionResult ViewImage(int id)
+        {
+            var img =  _imgService.ViewImage(id);
+            if(img == null)
+            {
+                return BadRequest($"There is no picture with id {id}");
+            }
+            return View(img);
         }
 
         [HttpDelete]

@@ -14,7 +14,7 @@
 
             <div class="row">
                 <div class="col-md-1">@img.Id</div>
-                <div class="col-md-3"><img src="@imgSrc" alt="image" style="height:200px;width:200px; border-radius:500px" /></div>
+                <div class="col-md-3"> <a  asp-action="ViewImage" asp-controller="Image" asp-route-id="@img.Id"><img src="@imgSrc" alt="image" style="height:200px;width:200px; border-radius:500px" /></a>  </div>
                 <div class="col-md-1"><a class="btn bnt-defaut" asp-action="RemoveImage" asp-route-id="@img.Id" asp-controller="Image">Delete</a></div>
             </div>
         }

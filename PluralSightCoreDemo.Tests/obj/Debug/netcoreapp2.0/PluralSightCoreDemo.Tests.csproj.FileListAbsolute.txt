@@ -1,0 +1,16 @@
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo.Tests\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo.Tests\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo.Tests\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo.Tests\bin\Debug\netcoreapp2.0\PluralSightCoreDemo.Tests.deps.json
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo.Tests\bin\Debug\netcoreapp2.0\PluralSightCoreDemo.Tests.runtimeconfig.json
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo.Tests\bin\Debug\netcoreapp2.0\PluralSightCoreDemo.Tests.runtimeconfig.dev.json
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo.Tests\bin\Debug\netcoreapp2.0\PluralSightCoreDemo.Tests.dll
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo.Tests\bin\Debug\netcoreapp2.0\PluralSightCoreDemo.Tests.pdb
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo.Tests\bin\Debug\netcoreapp2.0\PluralSightCoreDemo.dll
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo.Tests\bin\Debug\netcoreapp2.0\PluralSightCoreDemo.pdb
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo.Tests\obj\Debug\netcoreapp2.0\PluralSightCoreDemo.Tests.csprojResolveAssemblyReference.cache
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo.Tests\obj\Debug\netcoreapp2.0\PluralSightCoreDemo.Tests.csproj.CoreCompileInputs.cache
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo.Tests\obj\Debug\netcoreapp2.0\PluralSightCoreDemo.Tests.AssemblyInfoInputs.cache
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo.Tests\obj\Debug\netcoreapp2.0\PluralSightCoreDemo.Tests.AssemblyInfo.cs
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo.Tests\obj\Debug\netcoreapp2.0\PluralSightCoreDemo.Tests.dll
+C:\Users\nikolay.damyanov\Documents\Visual Studio 2017\Projects\PluralSightCoreDemo\PluralSightCoreDemo.Tests\obj\Debug\netcoreapp2.0\PluralSightCoreDemo.Tests.pdb

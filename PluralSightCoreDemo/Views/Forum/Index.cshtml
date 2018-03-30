@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Forum</h2>
+
+
+<div>
+    User:
+    <input type="text" id="user" />
+    <br />
+    Message:
+    <input type="text" id="message" />
+    <br />
+    <input type="button" value="send" onclick="send()" />
+</div>
+
+<div id="messages"></div>
+
+@section scripts{
+    <script>
+        var transportType = signalR.TransportType.WebSockets;
+        var logger = new signalR.ConsoleLogger(signalR.LogLevel.Information);
+        var forumHub = new signalR.HttpConnection("http://${document.location.host}/forum", { transport: transportType, logger: logger });
+        var chatConnection = new signalR.HubConnection(forumHub, logger);
+
+        chatConnection.onClosed = e => {
+            console.log('connection closed');
+        };
+
+        chatConnection.on('Send', (message) => {
+            document.getElementById('messages').innerHTML += '<div>' + message + '</div>';
+        });
+
+        chatConnection.start().catch(err => {
+            console.log('connection error');
+        });
+
+        function send() {
+            var user = document.getElementById('user').value;
+            var message = user + ':' + document.getElementById('message').value;
+            chatConnection.invoke('Send', message);
+        };
+    </script>
+}

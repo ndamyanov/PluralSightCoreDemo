@@ -36,5 +36,11 @@ namespace PluralSightCoreDemo.Services
         {
             return _context.Images.ToList();
         }
+
+        public Image ViewImage(int id)
+        {
+            return  _context.Images.Where(i => i.Id == id).FirstOrDefault();
+               
+        }
     }
 }

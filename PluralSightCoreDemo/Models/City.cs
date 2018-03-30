@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace PluralSightCoreDemo.Models
 {
-    public class City
+    public class City 
     {
         public int Id { get; set; }
 

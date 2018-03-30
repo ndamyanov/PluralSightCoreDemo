@@ -28,7 +28,7 @@ namespace PluralSightCoreDemo.Controllers
             return View(model);
         }
 
-        public IActionResult GetRestaurant(int id)
+        public IActionResult GetCity(int id)
         {
             var restaurant = _cityRepo.GetById(id);
             var model = Mapper.Map<City, CityViewModel>(restaurant);

@@ -12,6 +12,8 @@ namespace PluralSightCoreDemo.Services
 
         IEnumerable<Image> GetAllImages();
 
+        Image ViewImage(int id);
+
         bool Delete(int id);
     }
 }

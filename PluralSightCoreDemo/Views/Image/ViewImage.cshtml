@@ -1,0 +1,14 @@
+﻿@model Image
+@{
+    ViewData["Title"] = "ViewImage";
+}
+
+<h2>ViewImage</h2>
+
+@{ var base64 = Convert.ToBase64String(Model.ImageData);
+    var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+}
+<div class="container">
+    <img src="@imgSrc" alt="image" />
+    <a class="btn bnt-defaut" asp-action="RemoveImage" asp-route-id="@Model.Id" asp-controller="Image">Delete</a>
+</div>

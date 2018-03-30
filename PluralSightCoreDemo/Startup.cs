@@ -1,20 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Routing;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PluralSightCoreDemo.Services;
 using Microsoft.EntityFrameworkCore;
 using PluralSightCoreDemo.Data;
 using Microsoft.Extensions.Logging;
-using PluralSightCoreDemo.Models;
-using PluralSightCoreDemo.ViewModels;
 using AutoMapper;
+using PluralSightCoreDemo.Hub;
+using PluralSightCoreDemo.Models;
+using Microsoft.AspNetCore.Identity;
+using System;
 
 namespace PluralSightCoreDemo
 {
@@ -30,12 +27,49 @@ namespace PluralSightCoreDemo
         {
             services.AddSingleton<IGreater,Greeter>();
             services.AddDbContext<PluralSightDemoDbContext>(options => options.UseSqlServer(_config.GetConnectionString("DefaultConnection")));
+            services.AddIdentity<User, IdentityRole>()
+                .AddEntityFrameworkStores<PluralSightDemoDbContext>()
+                .AddDefaultTokenProviders();
+
+            services.Configure<IdentityOptions>(options =>
+            {
+                // Password settings
+                options.Password.RequireDigit = true;
+                options.Password.RequiredLength = 8;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = true;
+                options.Password.RequireLowercase = false;
+                //options.Password.RequiredUniqueChars = 6;
+
+                // Lockout settings
+                //options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(30);
+                //options.Lockout.MaxFailedAccessAttempts = 10;
+                //options.Lockout.AllowedForNewUsers = true;
+
+                // User settings
+                options.User.RequireUniqueEmail = true;
+            });
+
+            services.ConfigureApplicationCookie(options =>
+            {
+                // Cookie settings
+                options.Cookie.HttpOnly = true;
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+                // If the LoginPath isn't set, ASP.NET Core defaults 
+                // the path to /Account/Login.
+                options.LoginPath = "/Account/Login";
+                // If the AccessDeniedPath isn't set, ASP.NET Core defaults 
+                // the path to /Account/AccessDenied.
+                options.AccessDeniedPath = "/Account/AccessDenied";
+                options.SlidingExpiration = true;
+            });
+
             services.AddScoped<IRestourantData, SqlRestorantData>();
             services.AddScoped<ICityRepository, CityRepository>();
             services.AddScoped<IImageData, ImageService>();
 
             services.AddAutoMapper(); // Inftrastructure/Mappring/AutoMapperProfile
-
+            services.AddSignalR();
             services.AddMvc();
         }
         
@@ -43,14 +77,22 @@ namespace PluralSightCoreDemo
         {
             loggerFactory.AddDebug();
 
-            if (env.IsDevelopment())
+            if (!env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
             }
             app.UseStaticFiles();
             
             app.UseNodeModules(env.ContentRootPath);
 
+            app.UseSignalR(routes =>
+            {
+                routes.MapHub<ForumHub>("forum");
+            });
             //AutoMapper.Mapper.Initialize(cfg =>
             //{
             //   // cfg.CreateMap<City, CityIndexViewModel>(); // comes from the other AutoMapper extension
@@ -61,6 +103,9 @@ namespace PluralSightCoreDemo
             //    cfg.CreateMap<Restaurant, RestaurantCity>().ForMember(c => c.CityData, conf => conf.Ignore());
 
             //});
+
+            app.UseAuthentication();
+
             app.UseMvc(ConfigureRoutes);
         }
 

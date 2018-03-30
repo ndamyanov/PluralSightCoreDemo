@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PluralSightCoreDemo", "PluralSightCoreDemo\PluralSightCoreDemo.csproj", "{CE4606DD-DD13-40BE-9685-800C94C112E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityInfo.API", "CityInfo.API\CityInfo.API.csproj", "{6D653624-C2BE-4194-8CB8-F8F885DA017D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CityInfo.API", "CityInfo.API\CityInfo.API.csproj", "{6D653624-C2BE-4194-8CB8-F8F885DA017D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PluralSightCoreDemo.Tests", "PluralSightCoreDemo.Tests\PluralSightCoreDemo.Tests.csproj", "{D5E75FAB-F04D-495F-A707-4B986878C021}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6D653624-C2BE-4194-8CB8-F8F885DA017D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D653624-C2BE-4194-8CB8-F8F885DA017D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D653624-C2BE-4194-8CB8-F8F885DA017D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5E75FAB-F04D-495F-A707-4B986878C021}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5E75FAB-F04D-495F-A707-4B986878C021}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5E75FAB-F04D-495F-A707-4B986878C021}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5E75FAB-F04D-495F-A707-4B986878C021}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

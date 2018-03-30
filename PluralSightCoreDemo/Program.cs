@@ -15,7 +15,6 @@ namespace PluralSightCoreDemo
         public static void Main(string[] args)
         {
             BuildWebHost(args).Run();
-            throw new Exception();
         }
 
         public static IWebHost BuildWebHost(string[] args) =>

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using PluralSightCoreDemo.Models;
 using System;
@@ -8,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace PluralSightCoreDemo.Data
 {
-    public class PluralSightDemoDbContext : DbContext
+    public class PluralSightDemoDbContext : IdentityDbContext<User>
     {
-        public PluralSightDemoDbContext(DbContextOptions options) : base(options)
+        public PluralSightDemoDbContext(DbContextOptions<PluralSightDemoDbContext> options) : base(options)
         {
 
         }
@@ -25,11 +26,7 @@ namespace PluralSightCoreDemo.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Restaurant>()
-                .HasKey(r => r.Id);
-
-            modelBuilder.Entity<City>()
-                .HasKey(c => c.Id);
+           
 
             modelBuilder.Entity<RestaurantCity>()
                 .HasKey(x => new { x.CityId, x.ReataurantId });
